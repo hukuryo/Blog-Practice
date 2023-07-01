@@ -1,7 +1,12 @@
 "use client";
 
+import Header from "../components/Header";
+
 export default function profile() {
     return (
-        <h1>プロフィールページです</h1>
+        <div>
+            <Header/>
+            <h1>プロフィールページです</h1>
+        </div>
     )
 }
