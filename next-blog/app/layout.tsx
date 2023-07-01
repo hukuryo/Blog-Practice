@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   )
