@@ -3,7 +3,7 @@
 export function SideBar() {
     return (
         <>
-            <div className="bg-gray-50 dark:bg-gray-800 w-1/5 h-full">
+            <section className="">
                 <ul className="space-y-2 font-medium">
                     <li>
                     <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -40,7 +40,7 @@ export function SideBar() {
                     </a>
                     </li>
                 </ul>
-            </div>       
+            </section>       
         </>
     );
 }

@@ -6,17 +6,15 @@ import { SideBar } from "./components/SideBar";
 
 export default function Home() {
   return (
-    <>
-      <div>
-        <Header/>
-          <div className="flex">
-            <SideBar/>
-            <div className="relative flex">
-              <h1>ホームページです</h1>
-            </div>
-          </div>
-      </div>
-      <Footer/>
-    </>
-  )
+    <div>
+      <Header />
+      <main className="flex">
+        <SideBar />
+        <section className="relative flex">
+          <h1>ホームページです</h1>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 }
