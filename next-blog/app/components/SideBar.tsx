@@ -1,12 +1,36 @@
-import { Center, Grid, Text ,GridItem } from "@chakra-ui/react";
 
+import { Text, Card, Image,CardBody, Stack, Heading, Divider, CardFooter, ButtonGroup, Button, Box, VStack } from "@chakra-ui/react";
 
 export function SideBar() {
     return (
         <>
-            <Center w='300px' h='1000px' bg='gray.100'>
-                <Text>Box 1</Text>
-            </Center>
+            <Box bg="gray.200" w='350px' py={10} px={10} >
+                <VStack spacing={4} align="stretch">
+                <Card maxW='sm'>
+                    <CardBody>
+                        <Image
+                        src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                        alt='Green double couch with wooden legs'
+                        borderRadius='lg'
+                        />
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>RYOHEI</Heading>
+                            <Text>
+                                駆け出しエンジニアです
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <ButtonGroup spacing='2'>
+                            <Button variant='solid' colorScheme='blue'>
+                                Buy now
+                            </Button>
+                        </ButtonGroup>
+                    </CardFooter>
+                </Card>
+                </VStack>
+            </Box>
         </>
     );
 }
