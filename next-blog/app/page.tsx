@@ -7,11 +7,11 @@ import { Button, Card, CardBody, CardFooter, ChakraProvider, Heading, Stack } fr
 
 export default function Home() {
   return (
-      <ChakraProvider>
+    <>
         <Header />
         <main>
           <SideBar/>
         </main>
-      </ChakraProvider>
+    </>
   );
 }
