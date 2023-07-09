@@ -1,4 +1,5 @@
-import { Link } from "@chakra-ui/react"
+import Link from "next/link";
+
 
 export function Header() {
     return (
@@ -8,10 +9,10 @@ export function Header() {
                     <h1 className="font-bold text-xl">Ryohei-no-Blog</h1>
                 </div>
                 <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex">
-                    <Link className="text-xs" href="/">トップページ</Link>
-                    <Link className="text-xs" href="/articleList">記事一覧</Link>
-                    <Link className="text-xs" href="/profile">プロフィール</Link>
-                    <Link className="text-xs" href="/bookIntroduction">IT書籍紹介</Link>
+                    <Link className="text-xs hover:border-black" href="/">トップページ</Link>
+                    <Link className="text-xs hover:border-black" href="/articleList">記事一覧</Link>
+                    <Link className="text-xs hover:border-black" href="/profile">プロフィール</Link>
+                    <Link className="text-xs hover:border-black" href="/bookIntroduction">IT書籍紹介</Link>
                 </div>
                 <div className="flex justify-end col-span-1">
                     <button data-tooltip-target="sidebar-cta-button-example-toggle-dark-mode-tooltip" type="button" data-toggle-dark="light" className="flex items-center p-2 mr-2 text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">

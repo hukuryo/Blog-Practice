@@ -1,21 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="fixed top-18 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" aria-hidden="true">
+            <aside id="cta-button-sidebar" className="fixed top-18 right-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" aria-hidden="true">
                 <div className="shadow-lg h-full px-3 py-4 overflow-y-auto bg-indigo-100 dark:bg-gray-800">
                     <div id="dropdown-cta" className="p-4 mt-5 mb-5 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
                         <div className="flex items-center justify-center mb-3">
-                            <img className="h-10 w-10 rounded-full"  alt="" />
+                            
                         </div>
                         <h3 className="text-center mt-7 mb-7">fukuryo</h3>
-                        <p className="mb-3 text-xs text-blue-800 dark:text-blue-400">
+                        <p className="mb-3 text-xs dark:text-blue-400">
                             2022/11~エンジニアになりました。
+                            フロント中心に頑張っています。
                         </p>
                         <div className='mb-10 mt-10 flex items-center justify-center '>
-                            <button className="shadow-lg bg-gray-500 hover:bg-gray-400 text-white rounded px-2 py-2">プロフィール</button>
+                            <button className="shadow-lg bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-1">
+                                <Link className="text-xs hover:border-black" href="/profile">プロフィール</Link>
+                            </button>
                         </div>
                         <div className='text-center'>
                             <a href="https://github.com/hukuryo" className='mr-5'><FontAwesomeIcon className='text-black' icon={faGithub} /></a>
@@ -23,9 +29,8 @@ export function SideBar() {
                         </div>
                     </div>
                     <ul className="space-y-2 font-medium">
-                        <li className="flex justify-center items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">    
-                            <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span className="flex-1 ml-3 whitespace-nowrap">SNS</span>
+                        <li className="flex justify-center items-center p-2 text-gray-900 rounded-lg dark:text-white">    
+                            <h5 className='mt-7'>SNS</h5>
                         </li>
                         <li>
                             <a href="https://github.com/hukuryo" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
