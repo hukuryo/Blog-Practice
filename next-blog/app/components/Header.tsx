@@ -6,9 +6,8 @@ import Link from "next/link";
 export function Header() {
     return (
         <>
-
             <div>
-                <h1 className="tx-center mx-auto text-center mt-16 mb-16 text-2xl">Ryohei-no-blog</h1>
+                <h1 className="tx-center mx-auto text-center mt-16 mb-16 text-2xl font-bold">Ryohei-no-blog</h1>
             </div>
             <div className="w-full shadow-lg  p-5 pl-5 border border-gray-200 bg-sky-200 rounded-t-xl dark:border-gray-600 dark:bg-gray-700">
                 <div className="grid grid-cols-3">

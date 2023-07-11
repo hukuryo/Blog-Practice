@@ -11,7 +11,7 @@ export default function profile() {
             <main className="container mx-auto">
                 <div className="flex">
                     <SideBar/>
-                    <div className="ml-64 mt-32">
+                    <div className="ml-64 mt-32 w-full">
                         <div className="flex">
                             <div className="relative flex">
                                 <h1>プロフィールページです</h1>
