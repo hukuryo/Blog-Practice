@@ -8,13 +8,13 @@ export default function profile() {
     return (
         <>
             <Header/>
-            <main className="container mx-auto">
-                <div className="flex">
+            <main className="md:container md:mx-auto">
+                <div className="flex flex-row-reverse">
                     <SideBar/>
-                    <div className="ml-64 mt-32 w-full">
-                        <div className="flex">
-                            <div className="relative flex">
-                                <h1>プロフィールページです</h1>
+                    <div className="mt-32 ml-16 w-full">
+                        <div>
+                            <div>
+                                <h1 className="font-bold">プロフィールページです</h1>
                             </div>
                         </div>
                     </div>
