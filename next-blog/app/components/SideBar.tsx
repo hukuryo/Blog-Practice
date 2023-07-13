@@ -4,9 +4,9 @@ import Link from 'next/link';
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full w-2/5 h-screen transition-transform pl-5" aria-label="Sidebar" aria-hidden="true">
-                <div className="shadow-lg h-full px-3 py-4 bg-indigo-100 dark:bg-gray-800">
-                    <div id="dropdown-cta" className="p-4 mt-5 mb-5 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
+            <aside id="cta-button-sidebar" className="h-full w-2/5 transition-transform pl-5" aria-label="Sidebar" aria-hidden="true">
+                <div className="shadow-lg h-full px-3 py-4 bg-indigo-100 dark:bg-gray-700">
+                    <div id="dropdown-cta" className="p-4 mt-5 mb-5 rounded-lg bg-blue-50 dark:bg-blue-500" role="alert">
                         <div className="flex items-center justify-center mb-3">
                         </div>
                         <h3 className="text-center mt-7 mb-7">fukuryo</h3>
