@@ -1,16 +1,22 @@
 "use client";
 
 import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { SideBar } from "../components/SideBar"
+import { FooterForm } from "../components/FooterForm";
 
 export default function articleList() {
     return (
         <>
-            <div>
-                <Header/>
-                <h1>記事の一覧ページです</h1>
-            </div>
-            <Footer/>
+            <Header/>
+            <main className="md:container md:mx-auto">
+                <div className="flex flex-row-reverse">
+                    <SideBar/>
+                    <div className="mt-16 ml-16 w-full rounded-md">
+                        
+                    <FooterForm />
+                    </div>
+                </div>
+            </main>
         </>
     )
 }

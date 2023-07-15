@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-export function Footer() {
+export function FooterForm() {
     return (
         <footer className='mt-64 w-full'>
             <p className='font-bold mb-7 border-b-8'>お問い合わせはこちらから</p>
