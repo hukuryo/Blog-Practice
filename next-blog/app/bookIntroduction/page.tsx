@@ -10,7 +10,6 @@ export default function bookIntroduction() {
                 <Header/>
                 <h1>書籍の紹介ページです</h1>
             </div>
-            <Footer/>
         </>
     )
 }
