@@ -2,12 +2,15 @@
 import { Header } from "./components/Header";
 import { SideBar } from "./components/SideBar";
 import { FooterForm } from "./components/FooterForm";
+import { PageTitle } from "./components/PageTitle";
+
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className="md:container md:mx-auto">
+          <PageTitle title={"オススメの記事一覧"}/>
           <div className="flex flex-row-reverse">
               <SideBar/>
               <div className="flex flex-wrap mt-10 ml-5 w-full rounded-md">
