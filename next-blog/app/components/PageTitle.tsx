@@ -1,15 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
 type title = {
     title: string
 }
 
 export function PageTitle(props: title) {
     const {title} = props;
+
     return (
         <>
-            <h1 className="ml-5 mt-5 font-bold">{title}</h1>
+            <h1 className="text-2xl w-2/5 mt-5 mb-10 font-bold border-b-4 border-gray-400">{title}</h1>
         </>
     );
 }

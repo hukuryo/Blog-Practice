@@ -3,6 +3,7 @@
 import { Header } from "../components/Header";
 import { FooterForm } from "../components/FooterForm";
 import { SideBar } from "../components/SideBar";
+import { PageTitle } from "../components/PageTitle"
 
 export default function profile() {
     return (
@@ -12,7 +13,7 @@ export default function profile() {
                 <div className="flex flex-row-reverse">
                     <SideBar/>
                     <div className="mt-16 ml-16 w-full rounded-md">
-                        <h1 className="font-bold text-2xl">プロフィール紹介</h1>
+                        <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">Ryohei-no-Blogへようこそ！</p>
                         <p className="mt-8">このブログでは技術についての記事などを中心に記事を書いています。</p>
                         <p className="mt-8">このページでは自分の経歴を紹介していきます。</p>
