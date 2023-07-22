@@ -8,7 +8,7 @@ export default function profile() {
     return (
         <>
             <Header/>
-            <main className="md:container md:mx-auto">
+            <main className="container mx-auto">
                 <div className="flex flex-row-reverse">
                     <SideBar/>
                     <div className="mt-16 ml-16 w-full rounded-md">
