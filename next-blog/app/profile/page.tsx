@@ -14,7 +14,7 @@ export default function profile() {
                     <SideBar/>
                     <div className="mt-16 ml-16 w-full rounded-md">
                         <PageTitle title={"プロフィール紹介"}/>
-                        <p className="mt-16">Ryohei-no-Blogへようこそ！</p>
+                        <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
                         <p className="mt-8">このブログでは技術についての記事などを中心に記事を書いています。</p>
                         <p className="mt-8">このページでは自分の経歴を紹介していきます。</p>
                         <div className="mt-32">

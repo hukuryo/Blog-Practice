@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
 import Link from "next/link";
 
 export function Header() {
@@ -9,7 +6,7 @@ export function Header() {
             <div className="w-full shadow-lg  p-5 pl-5 border border-gray-200 bg-sky-200 rounded-t-xl dark:border-gray-600 dark:bg-gray-700">
                 <div className="grid grid-cols-3">
                     <div className="sm:col-span-1">
-                        <h1 className="font-bold text-xl">Ryohei-no-Blog</h1>
+                        <h1 className="font-bold text-xl">Hukuryo-no-Blog</h1>
                     </div>
                     <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex">
                         <Link className="text-xs hover:border-black" href="/">トップページ</Link>

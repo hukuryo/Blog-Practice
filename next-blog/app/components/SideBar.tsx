@@ -9,7 +9,7 @@ export function SideBar() {
                     <div id="dropdown-cta" className="p-4 mt-5 mb-5 rounded-lg bg-blue-50 dark:bg-blue-500" role="alert">
                         <div className="flex items-center justify-center mb-3">
                         </div>
-                        <h3 className="text-center mt-7 mb-7">fukuryo</h3>
+                        <h3 className="text-center mt-7 mb-7">Hukuryo</h3>
                         <p className="mb-3 text-xs dark:text-blue-400">
                             2022/11~エンジニアになりました。
                             フロント中心に頑張っています。
