@@ -1,12 +1,23 @@
-"use client";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 
 import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar"
 import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
 
+type booksContent = {
+    id: number
+    title: string,
+    body: string,
+}
 
-export default function bookIntroduction() {
+
+export default async function bookIntroduction() {
+
+    const supabase = createServerComponentClient({ cookies });
+
+    const { data: books } = await supabase.from("books").select();
     return (
         <>
             <Header />
@@ -18,18 +29,11 @@ export default function bookIntroduction() {
                             <PageTitle title={"読んだ書籍一覧"}/>
                         </div>
                         <div className="flex flex-wrap">
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
+                            {books?.map((books: booksContent) => (
+                                <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg" key={books.id}>
+                                    <div className="font-bold mt-10">{books.title}</div>
+                                </div>
+                            ))}
                         </div>
                         <FooterForm />
                     </div>

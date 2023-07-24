@@ -6,18 +6,17 @@ import { SideBar } from "./components/SideBar";
 import { FooterForm } from "./components/FooterForm";
 import { PageTitle } from "./components/PageTitle";
 
-type blogContent = {
+type articlesContent = {
     id: number
     title: string,
     body: string,
-    createdTime: string
 }
 
 export default async function Home() {
 
     const supabase = createServerComponentClient({ cookies });
 
-    const { data: blog } = await supabase.from("blog").select();
+    const { data: articles } = await supabase.from("articles").select();
     return (
         <>
         <Header />
@@ -29,9 +28,9 @@ export default async function Home() {
                         <PageTitle title={"オススメの記事一覧"}/>
                     </div>
                     <div className="flex flex-wrap">
-                        {blog?.map((blog: blogContent) => (
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg" key={blog.id}>
-                                <div className="font-bold mt-10">{blog.title}</div>
+                        {articles?.map((article: articlesContent) => (
+                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg" key={article.id}>
+                                <div className="font-bold mt-10">{article.title}</div>
                             </div>
                         ))}
                     </div>
