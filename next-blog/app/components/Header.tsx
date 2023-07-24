@@ -9,10 +9,10 @@ export function Header() {
                         <h1 className="font-bold text-xl">Hukuryo-no-Blog</h1>
                     </div>
                     <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex w-96">
-                        <Link className="text-xs hover:border-black font-bold hover:border-b-2" href="/">トップページ</Link>
-                        <Link className="text-xs hover:border-black font-bold hover:border-b-2" href="/articleList">記事一覧</Link>
-                        <Link className="text-xs hover:border-black font-bold hover:border-b-2" href="/profile">プロフィール</Link>
-                        <Link className="text-xs hover:border-black font-bold hover:border-b-2" href="/bookIntroduction">IT書籍紹介</Link>
+                        <Link href="/" legacyBehavior><a className="text-xs hover:border-black font-bold hover:border-b-2">トップページ</a></Link>
+                        <Link href="/articleList" legacyBehavior><a className="text-xs hover:border-black font-bold hover:border-b-2">記事一覧</a></Link>
+                        <Link href="/profile" legacyBehavior><a className="text-xs hover:border-black font-bold hover:border-b-2">プロフィール</a></Link>
+                        <Link href="/bookIntroduction" legacyBehavior><a className="text-xs hover:border-black font-bold hover:border-b-2">IT書籍紹介</a></Link>
                     </div>
                     <div className="flex justify-end col-span-2">
                         <button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-700 rounded-lg sm:hidden bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600">
