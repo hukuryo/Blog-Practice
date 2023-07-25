@@ -7,13 +7,6 @@ import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
 import { ArticleList } from "../components/ArticleList";
 
-type booksContent = {
-    id: number
-    title: string,
-    body: string,
-}
-
-
 export default async function bookIntroduction() {
 
     const supabase = createServerComponentClient({ cookies });
@@ -25,7 +18,7 @@ export default async function bookIntroduction() {
             <main className="md:container md:mx-auto">
                 <div className="flex flex-row-reverse">
                     <SideBar/>
-                    <div className="mt-10 ml-5 w-full rounded-md">
+                    <div className="mt-10 mr-3 ml-5 w-full rounded-md">
                         <div>
                             <PageTitle title={"読んだ書籍一覧"}/>
                         </div>

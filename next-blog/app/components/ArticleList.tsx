@@ -4,6 +4,7 @@ type articlesContent = {
     id: number;
     title: string;
     body: string;
+    date: string
 }
 
 type ArticleListProps = {
@@ -18,8 +19,8 @@ export function ArticleList(props: ArticleListProps) {
                 <li className="col-span-1 bg-white rounded-lg shadow-lg" key={article.id}>
                     <Link href={`/articles/${article.id}`} legacyBehavior>
                         <a className="block p-6 space-y-2">
-                        <h3 className="text-xl font-bold">{article.title}</h3>
-                        {/* 他のコンテンツをここに追加 */}
+                            <h5 className="text-sm font-bold">{article.title}</h5>
+                            <p>{article.date}</p>
                         </a>
                     </Link>
                 </li>

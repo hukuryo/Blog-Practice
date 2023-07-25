@@ -6,7 +6,7 @@ export function Header() {
             <div className="w-full shadow-lg  p-4 pl-4 border border-gray-200 bg-sky-200 rounded-t-xl dark:border-gray-600 dark:bg-gray-700">
                 <div className="grid grid-cols-3">
                     <div className="sm:col-span-1">
-                        <h1 className="font-bold text-xl">Hukuryo-no-Blog</h1>
+                        <h1 className="font-bold text-xl w-80">Hukuryo-no-Blog</h1>
                     </div>
                     <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex w-96">
                         <Link href="/" legacyBehavior><a className="text-xs hover:border-black font-bold hover:border-b-2">トップページ</a></Link>

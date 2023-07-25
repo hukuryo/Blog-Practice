@@ -16,7 +16,7 @@ export default async function articleList() {
             <main className="md:container md:mx-auto">
                 <div className="flex flex-row-reverse">
                     <SideBar/>
-                    <div className="mt-10 ml-5 w-full rounded-md">
+                    <div className="mt-10 mr-3 ml-5 w-full rounded-md">
                         <div>
                             <PageTitle title={"技術記事一覧"}/>
                         </div>
