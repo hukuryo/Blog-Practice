@@ -1,16 +1,13 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 import { Header } from "./components/Header";
 import { SideBar } from "./components/SideBar";
 import { FooterForm } from "./components/FooterForm";
 import { PageTitle } from "./components/PageTitle";
-
-type articlesContent = {
-    id: number
-    title: string,
-    body: string,
-}
+import { ArticleList } from "./components/ArticleList";
 
 export default async function Home() {
 
@@ -27,13 +24,7 @@ export default async function Home() {
                     <div>
                         <PageTitle title={"オススメの記事一覧"}/>
                     </div>
-                    <div className="flex flex-wrap">
-                        {articles?.map((article: articlesContent) => (
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg" key={article.id}>
-                                <div className="font-bold mt-10">{article.title}</div>
-                            </div>
-                        ))}
-                    </div>
+                    <ArticleList articles={articles} />
                     <FooterForm />
                 </div>
             </div>

@@ -5,6 +5,7 @@ import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar"
 import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
+import { ArticleList } from "../components/ArticleList";
 
 type booksContent = {
     id: number
@@ -28,13 +29,7 @@ export default async function bookIntroduction() {
                         <div>
                             <PageTitle title={"読んだ書籍一覧"}/>
                         </div>
-                        <div className="flex flex-wrap">
-                            {books?.map((books: booksContent) => (
-                                <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg" key={books.id}>
-                                    <div className="font-bold mt-10">{books.title}</div>
-                                </div>
-                            ))}
-                        </div>
+                        <ArticleList articles={books} />
                         <FooterForm />
                     </div>
                 </div>

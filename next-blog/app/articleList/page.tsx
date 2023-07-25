@@ -1,11 +1,15 @@
-"use client";
-
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar"
 import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
+import { ArticleList } from "../components/ArticleList";
 
-export default function articleList() {
+export default async function articleList() {
+    const supabase = createServerComponentClient({ cookies });
+
+    const { data: articles } = await supabase.from("articles").select();
     return (
         <>
             <Header />
@@ -16,20 +20,7 @@ export default function articleList() {
                         <div>
                             <PageTitle title={"技術記事一覧"}/>
                         </div>
-                        <div className="flex flex-wrap">
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
-                            <div className="pt-10 h-60 w-11/12 sm:w-2/5 text-center rounded-lg shadow-lg">
-                                <div className="font-bold mt-10">タイトル</div>
-                                <div className="mt-5">2023/7/19</div>
-                            </div>
-                        </div>
+                        <ArticleList articles={articles} />
                         <FooterForm />
                     </div>
                 </div>
