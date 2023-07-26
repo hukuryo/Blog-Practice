@@ -2,11 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-import {articlesContent} from "../types/article";
-
-type ArticleListProps = {
-    articles: articlesContent[] | null;
-}
+import { articlesContent, ArticleListProps } from "../types/article";
 
 export function ArticleList(props: ArticleListProps) {
     const { articles } = props;
