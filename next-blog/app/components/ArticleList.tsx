@@ -1,11 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-type articlesContent = {
-    id: number;
-    title: string;
-    body: string;
-    date: string
-}
+import {articlesContent} from "../types/article";
 
 type ArticleListProps = {
     articles: articlesContent[] | null;
@@ -23,8 +20,11 @@ export function ArticleList(props: ArticleListProps) {
                                 <img src="" alt="" />
                             </div>
                             <div className="mx-2">
-                                <h5 className="font-bold mb-3">{article.title}</h5>
-                                <small className="text-xs">{article.date}</small>
+                                <h5 className="font-bold mb-2">{article.title}</h5>
+                                <div className="flex items-center">
+                                    <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
+                                    <small className="text-xs">{article.date}</small>
+                                </div>
                             </div>
                         </a>
                     </Link>
