@@ -8,10 +8,9 @@ import { PageTitle } from "../components/PageTitle";
 import { ArticleList } from "../components/ArticleList";
 
 export default async function bookIntroduction() {
-
     const supabase = createServerComponentClient({ cookies });
-
     const { data: books } = await supabase.from("books").select();
+    
     return (
         <>
             <Header />
