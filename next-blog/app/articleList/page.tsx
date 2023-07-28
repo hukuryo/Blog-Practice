@@ -20,7 +20,7 @@ export default async function articleList() {
                         <div>
                             <PageTitle title={"技術記事一覧"}/>
                         </div>
-                        <ArticleList articles={articles} />
+                        <ArticleList articles={articles} pass={"articleList"}/>
                         <FooterForm />
                     </div>
                 </div>

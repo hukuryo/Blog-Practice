@@ -5,16 +5,16 @@ import Link from "next/link";
 import { articlesContent, ArticleListProps } from "../types/article";
 
 export function ArticleList(props: ArticleListProps) {
-    const { articles } = props;
+    const { articles, pass } = props;
     
     return (
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
             {articles?.map((article) => (
                 <li
                 className="col-span-1 rounded-lg shadow-lg bg-white p-2 transition-transform transform hover:scale-105"
                 key={article.id}
                 >
-                <Link href={`/articles/${article.id}`} legacyBehavior>
+                <Link href={`/${pass}/${article.id}`} legacyBehavior>
                     <a className="block space-y-2">
                     <div className="h-40 mb-2 bg-gray-100 rounded-md">
                         <img src="" alt="" className="w-full h-full object-cover rounded-md" />

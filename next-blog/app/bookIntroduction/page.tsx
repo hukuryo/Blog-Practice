@@ -21,7 +21,7 @@ export default async function bookIntroduction() {
                         <div>
                             <PageTitle title={"読んだ書籍一覧"}/>
                         </div>
-                        <ArticleList articles={books} />
+                        <ArticleList articles={books} pass={"bookIntroduction"} />
                         <FooterForm />
                     </div>
                 </div>

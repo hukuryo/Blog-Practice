@@ -38,10 +38,9 @@ export function FooterForm() {
                     </div>
                     <div className="flex items-center justify-center">
                     <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="bg-blue-500 hover:bg-blue-700 hover:scale-105 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit"
-                    >
-                        送信
+                    >送信
                     </button>
                     </div>
                 </form>
