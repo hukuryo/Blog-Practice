@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { Header } from "../components/Header";
 import { FooterForm } from "../components/FooterForm";
 import { SideBar } from "../components/SideBar";

@@ -12,6 +12,8 @@ export default async function Home() {
     const supabase = createServerComponentClient({ cookies });
 
     const { data: articles } = await supabase.from("articles").select();
+    
+
     return (
         <>
         <Header />
