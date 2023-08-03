@@ -1,5 +1,4 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+import { loadPosts } from "./lib/fetch-posts";
 
 import { Header } from "./components/Header";
 import { SideBar } from "./components/SideBar";
@@ -8,11 +7,7 @@ import { PageTitle } from "./components/PageTitle";
 import { ArticleList } from "./components/ArticleList";
 
 export default async function Home() {
-
-    const supabase = createServerComponentClient({ cookies });
-
-    const { data: articles } = await supabase.from("articles").select();
-    
+    const articles = await loadPosts();
 
     return (
         <>

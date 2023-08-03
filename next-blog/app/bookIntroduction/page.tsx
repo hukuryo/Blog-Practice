@@ -3,7 +3,6 @@ import { SideBar } from "../components/SideBar"
 import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
 import { ArticleList } from "../components/ArticleList";
-import { getArticlesList } from "../getArticles/getArticles";
 
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
@@ -13,7 +12,6 @@ const getArticles = async () => {
     const { data: books } = await supabase.from("books").select();
     return books;
 }
-
 
 export default async function bookIntroduction() {
     const books = await getArticles();
