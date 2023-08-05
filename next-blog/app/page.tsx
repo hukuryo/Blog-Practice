@@ -19,7 +19,7 @@ export default async function Home() {
                     <div>
                         <PageTitle title={"オススメの記事一覧"}/>
                     </div>
-                    <ArticleList articles={articles} pass={"articleList"}/>
+                    <ArticleList articles={articles} pass={"articles"}/>
                     <FooterForm />
                 </div>
             </div>

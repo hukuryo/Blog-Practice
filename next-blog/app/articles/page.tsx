@@ -6,7 +6,7 @@ import { FooterForm } from "../components/FooterForm";
 import { PageTitle } from "../components/PageTitle";
 import { ArticleList } from "../components/ArticleList";
 
-export default async function articleList() {
+export default async function articles() {
     const supabase = createServerComponentClient({ cookies });
 
     const { data: articles } = await supabase.from("articles").select();
@@ -20,7 +20,7 @@ export default async function articleList() {
                         <div>
                             <PageTitle title={"技術記事一覧"}/>
                         </div>
-                        <ArticleList articles={articles} pass={"articleList"}/>
+                        <ArticleList articles={articles} pass={"articles"}/>
                         <FooterForm />
                     </div>
                 </div>

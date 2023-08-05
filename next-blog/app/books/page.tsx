@@ -13,7 +13,7 @@ const getArticles = async () => {
     return books;
 }
 
-export default async function bookIntroduction() {
+export default async function books() {
     const books = await getArticles();
     
     return (
